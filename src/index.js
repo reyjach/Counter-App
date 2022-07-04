@@ -6,4 +6,4 @@ import './index.css';
 const divRoot = document.querySelector('#root');
 
 const root = createRoot(divRoot);
-root.render(<PrimeraApp />);
+root.render(<PrimeraApp vamos='estos son props'/>);
