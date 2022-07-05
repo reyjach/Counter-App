@@ -1,5 +1,6 @@
 import React from 'react';
 //import React, { Fragment } from 'react';
+import ProTypes from 'prop-types';
 
 const PrimeraApp = ({ vamos }) => {
 
@@ -18,5 +19,9 @@ const PrimeraApp = ({ vamos }) => {
         </>
     );
 };
+
+PrimeraApp.prototype = {
+    saludo:ProTypes.string.isRequired
+}
 
 export default PrimeraApp;
