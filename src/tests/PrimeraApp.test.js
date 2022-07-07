@@ -22,8 +22,25 @@ test('Debe de mostrar PrimeraApp correctamente', () => {
 
     const vamos = 'Hola, soy Goku';
 
-    const wrapper = shallow(<PrimeraApp vamos = {vamos}/>)
+    const wrapper = shallow(<PrimeraApp vamos = {vamos}/>);
 
-    expect( wrapper ).toMatchSnapshot()
- })
+    expect( wrapper ).toMatchSnapshot();
+ });
+
+ test('Debe de mostrar el subtitulo enviado por props', () => { 
+
+    const subtitulo = 'Soy un subtitulo';
+
+    const vamos = 'Hola, soy Goku';
+
+    const wrapper = shallow(
+        <PrimeraApp 
+            vamos = {subtitulo}
+            subtitulo = {subtitulo}
+            />
+    );
+    const textoParrafo = wrapper.find('p').text();
+
+    expect( textoParrafo ).toBe( subtitulo );
+  })
 })

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import ProTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const CounterApp = ({ value = 10 }) => {
 
@@ -30,8 +30,8 @@ const CounterApp = ({ value = 10 }) => {
     )
 }
 
-CounterApp.prototype = {
-    value: ProTypes.number
+CounterApp.propTypes = {
+    value: PropTypes.number
 }
 
 export default CounterApp;
